@@ -46,12 +46,10 @@ function showCart() {
     cartTR.appendChild(pictureTD);
     pictureTD.appendChild(newPicture);
 
-    // var quantityTD = document.createElement('td');
-    // quantityTD.innerText = cart.items.items[j].quantity;
-    // cartTR.appendChild(quantityTD);
+    var quantityTD = document.createElement('td');
+    quantityTD.innerText = cart.items.items[j].quantity;
+    cartTR.appendChild(quantityTD);
 
-    // var name = document.createElement('td');
-    // quantityTD.innerText = cart.items.items[j].quantity;
     // TODO: Add the TR to the TBODY and each of the TD's to the TR
     tBody.appendChild(cartTR);}
 }
