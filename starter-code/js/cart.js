@@ -38,13 +38,22 @@ function showCart() {
     var newBtn = document.createElement('button');
     newBtn.textContent = 'Delete this item';
     removeBtnTD.appendChild(newBtn);
-    var quantityTD = document.createElement('td');
-    quantityTD.innerText = cart.items.items[j].quantity;
-    var name = document.createElement('td');
-    quantityTD.innerText = cart.items.items[j].quantity;
+    cartTR.appendChild(removeBtnTD);
+
+    var pictureTD = document.createElement('td');
+    var newPicture = document.createElement('img');
+    newPicture.src = cart.items.items[j].product;
+    cartTR.appendChild(pictureTD);
+    pictureTD.appendChild(newPicture);
+
+    // var quantityTD = document.createElement('td');
+    // quantityTD.innerText = cart.items.items[j].quantity;
+    // cartTR.appendChild(quantityTD);
+
+    // var name = document.createElement('td');
+    // quantityTD.innerText = cart.items.items[j].quantity;
     // TODO: Add the TR to the TBODY and each of the TD's to the TR
-    tBody.appendChild(cartTR);
-    cartTR.appendChild(removeBtnTD);}
+    tBody.appendChild(cartTR);}
 }
 
 function removeItemFromCart(event) {
