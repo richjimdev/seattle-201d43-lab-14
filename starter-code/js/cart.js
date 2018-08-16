@@ -19,18 +19,32 @@ function renderCart() {
 }
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
-function clearCart() {}
+function clearCart() {
+  var tBody = document.getElementsByTagName('tbody');
+  while (tBody.firstChild) {
+    tBody.remove(tBody.firstChild);}
+}
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
-
   // TODO: Find the table body
-
+  var tBody = document.getElementsByTagName('tbody')[0];
   // TODO: Iterate over the items in the cart
-  // TODO: Create a TR
-  // TODO: Create a TD for the delete link, quantity,  and the item
-  // TODO: Add the TR to the TBODY and each of the TD's to the TR
-
+  for (var j = 0; j < cart.items.items.length; j++) {
+    // TODO: Create a TR
+    var cartTR = document.createElement('tr');
+    // TODO: Create a TD for the delete link, quantity,  and the item
+    var removeBtnTD = document.createElement('td');
+    var newBtn = document.createElement('button');
+    newBtn.textContent = 'Delete this item';
+    removeBtnTD.appendChild(newBtn);
+    var quantityTD = document.createElement('td');
+    quantityTD.innerText = cart.items.items[j].quantity;
+    var name = document.createElement('td');
+    quantityTD.innerText = cart.items.items[j].quantity;
+    // TODO: Add the TR to the TBODY and each of the TD's to the TR
+    tBody.appendChild(cartTR);
+    cartTR.appendChild(removeBtnTD);}
 }
 
 function removeItemFromCart(event) {
