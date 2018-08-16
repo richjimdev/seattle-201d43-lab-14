@@ -10,15 +10,12 @@ var cart = new Cart([]);
 function populateForm() {
   // select id="items"
   //TODO: Add an <option> tag inside the form's select for each product
-  var num = 0;
-
   var selectElement = document.getElementById('items');
   for (var product of Product.allProducts) {
     var itemOnList = document.createElement('option');
     itemOnList.innerText = product.name;
-    itemOnList.value = num;
+    itemOnList.value = product.filePath;
     selectElement.appendChild(itemOnList);
-    num++;
   }
 }
 

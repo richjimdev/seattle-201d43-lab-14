@@ -1,1 +1,14 @@
 /* TODO: Make it awesome */
+body {
+  background-color: rgb(182, 182, 182);
+  max-width: 960;
+}
+
+table img {
+  max-width: 150px;
+}
+
+td {
+  padding: 25px;
+  background-color: bisque;
+}
